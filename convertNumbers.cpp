@@ -1,9 +1,11 @@
 #include "convertNumbers.hpp"
 
-string DecimalToBinary(int decimal) {
-    string ret;
-    
-    return ret;
+int DecimalToBinary(int decimal) {
+    if (decimal == 0) {
+        return 0;
+    } else {
+        return decimal % 2 + 10 * (DecimalToBinary(decimal/2));
+    }
 }
 
 string DecimalToHexadecimal(int decimal) {

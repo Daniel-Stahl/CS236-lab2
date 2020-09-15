@@ -1,7 +1,7 @@
 #include <string>
 using namespace std;
 
-string DecimalToBinary(int decimal);
+int DecimalToBinary(int decimal);
 string DecimalToHexadecimal(int decimal);
 int BinaryToDecimal(string binary);
 int HexadecimalToDecimal(string hex);
