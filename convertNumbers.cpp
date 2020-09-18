@@ -19,14 +19,27 @@ void DecimalToHexadecimal(int decimal) {
         return;
     } else {
         DecimalToHexadecimal(decimal / 16);
-        tempNum = decimal % 16;
-        cout << HexCheck(tempNum);
+        cout << HexCheck(decimal % 16);
         return;
     }
 }
 
 int BinaryToDecimal(string binary) {
     int ret = 0;
+    int x = 1;
+    int stringSize = binary.size();
+    
+    if (x > stringSize) {
+        return 0;
+    } else if (binary.at(stringSize - x)) {
+       
+        x++;
+    } else {
+        
+        x++
+    }
+    
+    
     
     return ret;
 }
