@@ -1,3 +1,5 @@
+enum HexValues {A = 10, B = 11, C = 12, D = 13, E = 14, F = 15};
+
 #include "convertNumbers.hpp"
 
 int DecimalToBinary(int decimal) {
@@ -8,10 +10,19 @@ int DecimalToBinary(int decimal) {
     }
 }
 
-string DecimalToHexadecimal(int decimal) {
+void DecimalToHexadecimal(int decimal) {
     string ret;
+    int tempNum = 0;
+    char tempChar;
     
-    return ret;
+    if (decimal == 0) {
+        return;
+    } else {
+        DecimalToHexadecimal(decimal / 16);
+        tempNum = decimal % 16;
+        cout << HexCheck(tempNum);
+        return;
+    }
 }
 
 int BinaryToDecimal(string binary) {
@@ -29,10 +40,11 @@ int HexadecimalToDecimal(string hex) {
 
 // HELPER FUNCTIONS //
 
-string HexChecker(char hex) {
+char HexCheck(int decimal) {
     // Check hex char and return binary value
-    
-    string ret;
-    
-    return ret;
+    if (decimal < 10) {
+        return 48 + decimal;
+    } else {
+        return 55 + decimal;
+    }
 }

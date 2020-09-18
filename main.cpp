@@ -15,7 +15,8 @@ int main() {
     cout << "Enter a positive decimal integer: ";
     cin >> decimalNum;
     
-    cout << decimalNum << " is binary " << DecimalToBinary(decimalNum);
-    
+    cout << decimalNum << " is binary " << DecimalToBinary(decimalNum) << endl;
+    cout << decimalNum << " is Hex ";
+    DecimalToHexadecimal(decimalNum);
     
 }
