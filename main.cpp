@@ -8,7 +8,7 @@ CS236, Section #25704
 
 int main() {
     int decimalNum;
-    string binaryNum;
+    int binaryNum;
     string hexNum;
     
     cout << "Convert decimal integer to binary and hex\n";
@@ -20,9 +20,13 @@ int main() {
     DecimalToHexadecimal(decimalNum);
     cout << "\n";
     
+    //cin.clear();
+    
     cout << "Convert a binary number to decimal integer\n";
     cout << "Enter a binary number: ";
     cin >> decimalNum;
+    
+    cout << decimalNum << " is decimal " << BinaryToDecimal(decimalNum, 0);
     
     
     

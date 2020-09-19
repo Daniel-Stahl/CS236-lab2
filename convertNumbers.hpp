@@ -4,7 +4,7 @@ using namespace std;
 
 int DecimalToBinary(int decimal);
 void DecimalToHexadecimal(int decimal);
-int BinaryToDecimal(string binary);
+int BinaryToDecimal(int binary, int ret);
 int HexadecimalToDecimal(string hex);
 
 // HELPER FUNCTIONS //

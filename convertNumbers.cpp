@@ -24,24 +24,23 @@ void DecimalToHexadecimal(int decimal) {
     }
 }
 
-int BinaryToDecimal(string binary) {
-    int ret = 0;
-    int x = 1;
-    int stringSize = binary.size();
+int BinaryToDecimal(int binary, int ret) {
+    int temp = 0;
+    int base = 1;
     
-    if (x > stringSize) {
+    if (binary == 0) {
         return 0;
-    } else if (binary.at(stringSize - x)) {
-       
-        x++;
     } else {
+        base = base * 2;
+        temp = binary % 10;
+        ret += temp * base;
+        BinaryToDecimal(binary / 10, ret);
         
-        x++
+        
+        
+        return ret;
+        
     }
-    
-    
-    
-    return ret;
 }
 
 int HexadecimalToDecimal(string hex) {
