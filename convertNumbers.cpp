@@ -24,22 +24,11 @@ void DecimalToHexadecimal(int decimal) {
     }
 }
 
-int BinaryToDecimal(int binary, int ret) {
-    int temp = 0;
-    int base = 1;
-    
+int BinaryToDecimal(int binary) {
     if (binary == 0) {
         return 0;
     } else {
-        base = base * 2;
-        temp = binary % 10;
-        ret += temp * base;
-        BinaryToDecimal(binary / 10, ret);
-        
-        
-        
-        return ret;
-        
+        return binary % 10 + 2 * BinaryToDecimal(binary/10);
     }
 }
 

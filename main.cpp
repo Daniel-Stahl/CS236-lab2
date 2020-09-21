@@ -26,7 +26,7 @@ int main() {
     cout << "Enter a binary number: ";
     cin >> decimalNum;
     
-    cout << decimalNum << " is decimal " << BinaryToDecimal(decimalNum, 0);
+    cout << decimalNum << " is decimal " << BinaryToDecimal(decimalNum);
     
     
     
