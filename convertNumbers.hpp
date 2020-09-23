@@ -9,4 +9,4 @@ int HexadecimalToDecimal(string hex);
 
 // HELPER FUNCTIONS //
 
-char HexCheck(int decimal);
+char HexConverter(int decimal);

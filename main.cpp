@@ -8,26 +8,26 @@ CS236, Section #25704
 
 int main() {
     int decimalNum;
-    int binaryNum;
     string hexNum;
     
-    cout << "Convert decimal integer to binary and hex\n";
-    cout << "Enter a positive decimal integer: ";
-    cin >> decimalNum;
+//    cout << "Convert decimal integer to binary and hex\n";
+//    cout << "Enter a positive decimal integer: ";
+//    cin >> decimalNum;
+//    
+//    cout << decimalNum << " is binary " << DecimalToBinary(decimalNum) << "\n";
+//    cout << decimalNum << " is Hex ";
+//    DecimalToHexadecimal(decimalNum);
+//    
+//    cout << "\nConvert a binary number to decimal integer\n";
+//    cout << "Enter a binary number: ";
+//    cin >> decimalNum;
+//    
+//    cout << decimalNum << " is decimal " << BinaryToDecimal(decimalNum);
     
-    cout << decimalNum << " is binary " << DecimalToBinary(decimalNum) << "\n";
-    cout << decimalNum << " is Hex ";
-    DecimalToHexadecimal(decimalNum);
-    cout << "\n";
+    cout << "\nConvert a hexadecimal number to decimal integer\n";
+    cout << "Enter a hex number: ";
+    cin >> hexNum;
     
-    //cin.clear();
-    
-    cout << "Convert a binary number to decimal integer\n";
-    cout << "Enter a binary number: ";
-    cin >> decimalNum;
-    
-    cout << decimalNum << " is decimal " << BinaryToDecimal(decimalNum);
-    
-    
+    cout << hexNum << " is decimal " << HexadecimalToDecimal(hexNum);
     
 }
