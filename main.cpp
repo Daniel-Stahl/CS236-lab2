@@ -6,6 +6,8 @@ CS236, Section #25704
 
 #include "convertNumbers.hpp"
 
+bool CheckBinaryNum(int binary);
+
 int main() {
     int decimalNum;
     string hexNum;
@@ -18,13 +20,12 @@ int main() {
     cout << "Enter a positive decimal integer: ";
     cin >> decimalNum;
 
-    while (!cin || decimalNum < 0) {
+    while (!isdigit(decimalNum) && decimalNum < 0) {
         cin.clear();
         cin.ignore(200, '\n');
 
         cout << "Wrong input, please enter a positive number: ";
         cin >> decimalNum;
-
     }
 
     cout << decimalNum << " is binary " << DecimalToBinary(decimalNum) << "\n";
@@ -35,12 +36,8 @@ int main() {
     cout << "\nConvert a binary number to decimal integer\n";
     cout << "Enter a binary number: ";
     cin >> decimalNum;
-
-    /*
-     input check, convert num to string and check each char. similar to hex.
-     */
     
-    while (!cin || (decimalNum < 0 || decimalNum > 1)) {
+    while (!CheckBinaryNum(decimalNum)) {
         cin.clear();
         cin.ignore(200, '\n');
 
@@ -73,4 +70,20 @@ int main() {
     }
     
     cout << hexNum << " is decimal " << HexadecimalToDecimal(hexNum);
+}
+
+bool CheckBinaryNum(int binary) {
+    int tempNum;
+    
+    while (binary != 0) {
+        tempNum = binary % 10;
+        
+        if (tempNum > 1) {
+            return false;
+        }
+        
+        binary /= 10;
+    }
+    
+    return true;
 }
