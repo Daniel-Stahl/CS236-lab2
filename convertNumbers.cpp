@@ -22,7 +22,7 @@ int BinaryToDecimal(int binary) {
     if (binary == 0) {
         return 0;
     } else {
-        return binary % 10 + 2 * BinaryToDecimal(binary / 10);
+        return binary % 10 + 2 * BinaryToDecimal(binary/10);
     }
 }
 
