@@ -13,7 +13,6 @@ bool CheckHexNum(string hex);
 int main() {
     string decimalNum;
     int decimal = 0;
-    int binaryNum;
     string hexNum;
     
     // Decimal to Binary & Hex
@@ -51,9 +50,6 @@ int main() {
         cin >> decimalNum;
     }
     
-    stringstream userInput2(decimalNum);
-    userInput2 >> binaryNum;
-
     cout << decimalNum << " is decimal " << BinaryToDecimal(decimalNum, 0);
     cout << "\n";
     

@@ -1,6 +1,5 @@
 #include "convertNumbers.hpp"
 
-// Needs to be able to convert 1030, use strings instead.
 string DecimalToBinary(int decimal) {
     if (decimal == 0) {
         return "";
@@ -21,7 +20,6 @@ void DecimalToHexadecimal(int decimal) {
     }
 }
 
-// Needs to be able to convert binary, use strings instead.
 int BinaryToDecimal(string binary, int x) {
     int binarySize = binary.size();
     
