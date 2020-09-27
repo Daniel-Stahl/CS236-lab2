@@ -1,10 +1,13 @@
 #include "convertNumbers.hpp"
 
-int DecimalToBinary(int decimal) {
+// Needs to be able to convert 1030, use strings instead.
+string DecimalToBinary(int decimal) {
     if (decimal == 0) {
-        return 0;
+        return "";
     } else {
-        return decimal % 2 + 10 * (DecimalToBinary(decimal/2));
+        ostringstream num;
+        num << decimal % 2;
+        return DecimalToBinary(decimal/2) + num.str();
     }
 }
 
@@ -18,11 +21,14 @@ void DecimalToHexadecimal(int decimal) {
     }
 }
 
-int BinaryToDecimal(int binary) {
-    if (binary == 0) {
-        return 0;
+// Needs to be able to convert binary, use strings instead.
+int BinaryToDecimal(string binary, int x) {
+    int binarySize = binary.size();
+    
+    if (x == binarySize - 1) {
+        return binary[x] - '0';
     } else {
-        return binary % 10 + 2 * BinaryToDecimal(binary/10);
+        return ((binary[x] - '0') << (binarySize-x-1)) + BinaryToDecimal(binary, x+1);
     }
 }
 
@@ -37,7 +43,6 @@ int HexadecimalToDecimal(string hex) {
     }
 }
 
-// HELPER FUNCTIONS //
 char HexConverter(int decimal) {
     if (decimal < 10) {
         return 48 + decimal;

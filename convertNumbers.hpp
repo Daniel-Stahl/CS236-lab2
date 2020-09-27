@@ -1,10 +1,11 @@
 #include <string>
 #include <iostream>
+#include <sstream>
 using namespace std;
 
-int DecimalToBinary(int decimal);
+string DecimalToBinary(int decimal);
 void DecimalToHexadecimal(int decimal);
-int BinaryToDecimal(int binary);
+int BinaryToDecimal(string binary, int x);
 int HexadecimalToDecimal(string hex);
 
 // HELPER FUNCTIONS //
